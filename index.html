@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Countries Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f8f9fa;
+      }
+
+      .search-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .search-container input {
+        width: 15%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .buttons button {
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        background: orange;
+        color: white;
+        cursor: pointer;
+      }
+
+      #countries-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .country-card {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        background: white;
+      }
+
+      .country-card img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>World Countries Data</h1>
+
+    <div class="search-container">
+      <input type="text" id="searchName" placeholder="Search by name" />
+      <input type="text" id="searchCapital" placeholder="Search by capital" />
+      <input type="text" id="searchLanguage" placeholder="Search by language" />
+    </div>
+
+    <div class="buttons">
+      <button id="sortByName">Name</button>
+      <button id="sortByCapital">Capital</button>
+      <button id="sortByLanguage">Language</button>
+    </div>
+
+    <div id="countries-container"></div>
+
+    <script src="./data/countries_data.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
