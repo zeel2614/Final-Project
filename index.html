@@ -4,63 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Countries Data</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background: #f8f9fa;
-      }
-
-      .search-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin: 20px 0;
-      }
-
-      .search-container input {
-        width: 15%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
-
-      .buttons button {
-        margin: 5px;
-        padding: 10px;
-        border: none;
-        background: orange;
-        color: white;
-        cursor: pointer;
-      }
-
-      #countries-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .country-card {
-        border: 1px solid #ddd;
-        padding: 10px;
-        margin: 10px;
-        width: 200px;
-        background: white;
-      }
-
-      .country-card img {
-        width: 100%;
-        height: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <h1>World Countries Data</h1>
 
     <div class="search-container">
-      <input type="text" id="searchName" placeholder="Search by name" />
-      <input type="text" id="searchCapital" placeholder="Search by capital" />
-      <input type="text" id="searchLanguage" placeholder="Search by language" />
+      <!-- Name Search -->
+      <div class="dropdown-container">
+        <input type="text" id="searchName" class="dropdown-input" placeholder="Search by name" />
+        <div id="nameDropdownList" class="dropdown-list"></div>
+      </div>
+
+      <!-- Capital Search -->
+      <div class="dropdown-container">
+        <input type="text" id="searchCapital" class="dropdown-input" placeholder="Search by capital" />
+        <div id="capitalDropdownList" class="dropdown-list"></div>
+      </div>
+
+      <!-- Language Search -->
+      <div class="dropdown-container">
+        <input type="text" id="searchLanguage" class="dropdown-input" placeholder="Search by language" />
+        <div id="languageDropdownList" class="dropdown-list"></div>
+      </div>
     </div>
 
     <div class="buttons">
@@ -70,6 +36,19 @@
     </div>
 
     <div id="countries-container"></div>
+
+    <div id="paginationControls">
+      <label for="recordsPerPage">Records Per Page:</label>
+      <select id="recordsPerPage">
+        <option value="5">5</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+      </select>
+      <button id="prevPage">Previous</button>
+      <span id="pageIndicator">Page 1</span>
+      <button id="nextPage">Next</button>
+    </div>
 
     <script src="./data/countries_data.js"></script>
     <script src="./scripts/main.js"></script>

@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.dropdown-container {
+  position: relative;
+  width: 150px;
+}
+
+.dropdown-input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-list {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: white;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background: orange;
+  color: white;
+  cursor: pointer;
+}
+
+#countries-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.country-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  background: white;
+}
+
+.country-card img {
+  width: 100%;
+  height: auto;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#pageIndicator {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#recordsPerPage {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
