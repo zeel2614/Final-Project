@@ -2,12 +2,13 @@ const countries = [
   {
     name: "Afghanistan",
     capital: "Kabul",
-    languages: ["Pashto", "Uzbek", "Turkmen"],
+    languages: ["Pashto"],
     population: 40218234,
     flag: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
     region: "Asia",
     area: 652230,
   },
+
   {
     name: "Åland Islands",
     capital: "Mariehamn",
@@ -17,6 +18,7 @@ const countries = [
     region: "Europe",
     area: 1580,
   },
+
   {
     name: "Albania",
     capital: "Tirana",
@@ -26,6 +28,7 @@ const countries = [
     region: "Europe",
     area: 28748,
   },
+
   {
     name: "Algeria",
     capital: "Algiers",
@@ -38,7 +41,7 @@ const countries = [
   {
     name: "American Samoa",
     capital: "Pago Pago",
-    languages: ["English", "Samoan"],
+    languages: ["Samoan"],
     population: 55197,
     flag: "https://flagcdn.com/as.svg",
     region: "Oceania",
@@ -73,7 +76,7 @@ const countries = [
   },
   {
     name: "Antarctica",
-    languages: ["English", "Russian"],
+    languages: ["Russian"],
     population: 1000,
     flag: "https://flagcdn.com/aq.svg",
     region: "Polar",
@@ -91,7 +94,7 @@ const countries = [
   {
     name: "Argentina",
     capital: "Buenos Aires",
-    languages: ["Spanish", "Guaraní"],
+    languages: ["Spanish"],
     population: 45376763,
     flag: "https://flagcdn.com/ar.svg",
     region: "Americas",
@@ -109,7 +112,7 @@ const countries = [
   {
     name: "Aruba",
     capital: "Oranjestad",
-    languages: ["Dutch", "(Eastern) Punjabi"],
+    languages: ["Dutch"],
     population: 106766,
     flag: "https://flagcdn.com/aw.svg",
     region: "Americas",
@@ -181,7 +184,7 @@ const countries = [
   {
     name: "Belarus",
     capital: "Minsk",
-    languages: ["Belarusian", "Russian"],
+    languages: ["Belarusian"],
     population: 9398861,
     flag: "https://flagcdn.com/by.svg",
     region: "Europe",
@@ -190,7 +193,7 @@ const countries = [
   {
     name: "Belgium",
     capital: "Brussels",
-    languages: ["Dutch", "French", "German"],
+    languages: ["German"],
     population: 11555997,
     flag: "https://flagcdn.com/be.svg",
     region: "Europe",
@@ -199,7 +202,7 @@ const countries = [
   {
     name: "Belize",
     capital: "Belmopan",
-    languages: ["English", "Spanish"],
+    languages: ["Spanish"],
     population: 397621,
     flag: "https://flagcdn.com/bz.svg",
     region: "Americas",
@@ -235,7 +238,7 @@ const countries = [
   {
     name: "Bolivia (Plurinational State of)",
     capital: "Sucre",
-    languages: ["Spanish", "Aymara", "Quechua"],
+    languages: ["Quechua"],
     population: 11673029,
     flag: "https://flagcdn.com/bo.svg",
     region: "Americas",
@@ -253,7 +256,7 @@ const countries = [
   {
     name: "Bosnia and Herzegovina",
     capital: "Sarajevo",
-    languages: ["Bosnian", "Croatian", "Serbian"],
+    languages: ["Bosnian"],
     population: 3280815,
     flag: "https://flagcdn.com/ba.svg",
     region: "Europe",

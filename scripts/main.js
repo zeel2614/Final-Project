@@ -10,11 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const prevPage = document.getElementById("prevPage");
   const nextPage = document.getElementById("nextPage");
-  const pageIndicator = document.getElementById("pageIndicator");
 
   let countriesData = countries;
   let filteredData = countriesData;
-  let sortOrder = "asc";
+  let sortOrder = "desc";
 
   let itemsPerPage = 5;
   let currentPage = 1;
@@ -45,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function updatePaginationControls(totalItems) {
     prevPage.disabled = currentPage === 1;
     nextPage.disabled = currentPage === Math.ceil(totalItems / itemsPerPage);
-    pageIndicator.textContent = `Page ${currentPage}`;
   }
 
   function filterCountries(field) {
@@ -81,8 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dropdownItem.classList.add("dropdown-item");
       if (field === "name") dropdownItem.textContent = item.name;
       if (field === "capital") dropdownItem.textContent = item.capital;
-      if (field === "language")
-        dropdownItem.textContent = item.languages.join(", ");
+      if (field === "language") dropdownItem.textContent = item.languages;
       dropdownItem.addEventListener("click", () => {
         if (field === "name") searchName.value = item.name;
         if (field === "capital") searchCapital.value = item.capital;
@@ -103,12 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  document.addEventListener("mousemove", hideDropdowns);
+  document.addEventListener("click", hideDropdowns);
   searchName.addEventListener("input", () => filterCountries("name"));
   searchCapital.addEventListener("input", () => filterCountries("capital"));
   searchLanguage.addEventListener("input", () => filterCountries("language"));
 
-  document.addEventListener("click", hideDropdowns);
+  document.addEventListener("onSelect", hideDropdowns);
 
   function sortData(sortBy) {
     filteredData.sort((a, b) => {
@@ -128,8 +125,25 @@ document.addEventListener("DOMContentLoaded", () => {
     sortOrder = sortOrder === "asc" ? "desc" : "asc";
     currentPage = 1;
     displayCountries(filteredData);
+    updateSortArrow(sortBy);
   }
-    
+
+  function updateSortArrow(sortBy) {
+    const arrows = {
+      name: document.getElementById("nameArrow"),
+      capital: document.getElementById("capitalArrow"),
+      languages: document.getElementById("languageArrow"),
+    };
+
+    for (const key in arrows) {
+      if (key === sortBy) {
+        arrows[key].textContent = sortOrder === "desc" ? "▲" : "▼";
+      } else {
+        arrows[key].textContent = "▲";
+      }
+    }
+  }
+
   sortByName.addEventListener("click", () => sortData("name"));
   sortByCapital.addEventListener("click", () => sortData("capital"));
   sortByLanguage.addEventListener("click", () => sortData("languages"));

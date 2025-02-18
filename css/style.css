@@ -73,36 +73,54 @@ body {
   height: auto;
 }
 
-.pagination {
-  margin-top: 20px;
+#paginationControls {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-top: 20px;
 }
 
-.pagination button {
-  padding: 10px;
+#paginationControls button {
+  padding: 10px 15px;
   border: none;
-  background: #007bff;
+  background: orange;
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
-.pagination button:disabled {
+#paginationControls button:hover {
+  background: darkorange;
+}
+
+#paginationControls button:disabled {
   background: #ccc;
   cursor: not-allowed;
 }
 
-#pageIndicator {
-  font-size: 16px;
-  font-weight: bold;
-}
-
 #recordsPerPage {
-  padding: 5px;
+  padding: 8px;
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.sort-arrow {
+  margin-left: 5px;
+  font-size: 14px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.sort-arrow.asc {
+  transform: rotate(180deg);
+}
+
+.sort-arrow.desc {
+  transform: rotate(0deg);
 }

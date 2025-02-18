@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Countries Data</title>
-    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <h1>World Countries Data</h1>
@@ -30,26 +29,25 @@
     </div>
 
     <div class="buttons">
-      <button id="sortByName">Name</button>
-      <button id="sortByCapital">Capital</button>
-      <button id="sortByLanguage">Language</button>
+      <button id="sortByName">Name <span class="sort-arrow" id="nameArrow">▲</span></button>
+      <button id="sortByCapital">Capital <span class="sort-arrow" id="capitalArrow">▲</span></button>
+      <button id="sortByLanguage">Language <span class="sort-arrow" id="languageArrow">▲</span></button>
     </div>
-
+    
     <div id="countries-container"></div>
 
     <div id="paginationControls">
-      <label for="recordsPerPage">Records Per Page:</label>
+      <button id="prevPage"><</button>
       <select id="recordsPerPage">
         <option value="5">5</option>
         <option value="50">50</option>
         <option value="100">100</option>
         <option value="200">200</option>
       </select>
-      <button id="prevPage">Previous</button>
-      <span id="pageIndicator">Page 1</span>
-      <button id="nextPage">Next</button>
+      <button id="nextPage">></button>
     </div>
 
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./data/countries_data.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
